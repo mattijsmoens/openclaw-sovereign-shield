@@ -23,7 +23,7 @@ Before an autonomous agent executes a sensitive capability like `bash`, the Open
 
 Install the plugin securely into your OpenClaw environment:
 ```bash
-openclaw plugins install openclaw-sovereign-shield
+openclaw plugins install github.com/mattijsmoens/openclaw-sovereign-shield
 ```
 
 ### 1. Local Daemon Mode (Default)
@@ -31,7 +31,7 @@ By default, the plugin connects to `http://localhost:8765`.
 For maximum privacy and zero latency, you must run the free SovereignShield Python daemon locally on your machine.
 ```bash
 # Clone SovereignShield core
-git clone https://github.com/your-org/sovereign-shield
+git clone https://github.com/mattijsmoens/sovereign-shield
 cd SovereignShield
 python ss_daemon.py
 ```
