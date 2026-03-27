@@ -4,7 +4,7 @@ A native, deterministic security defense layer for the **OpenClaw** autonomous A
 
 By design, OpenClaw agents have autonomous access to extremely sensitive system tools (such as `bash`, `exec`, `python`, and `fs_write`). This unprecedented level of environment access makes standalone AI agents critically vulnerable to **Prompt Injections**, where a malicious user overrides the logic to spawn reverse shells or destroy files. 
 
-**This plugin acts as an explicit, high-speed security interception layer.** It intercepts every high-risk OS execution call *before* it touches your host machine, routing the payload through **SovereignShield**—an industrialized LLM sandbox and firewall—to prevent Remote Code Execution (RCE) patterns in sub-milliseconds.
+**This plugin acts as an explicit, high-speed security interception layer.** It intercepts every high-risk OS execution call *before* it touches your host machine, routing the payload through **SovereignShield** - an industrialized LLM sandbox and firewall - to prevent Remote Code Execution (RCE) patterns in sub-milliseconds.
 
 ---
 
@@ -30,8 +30,10 @@ openclaw plugins install github.com/mattijsmoens/openclaw-sovereign-shield
 By default, the plugin connects to `http://localhost:8765`. 
 For maximum privacy and zero latency, you must run the free SovereignShield Python daemon locally on your machine.
 ```bash
+git clone https://github.com/mattijsmoens/sovereign-shield
+cd SovereignShield
 pip install sovereign-shield
-python -m sovereign_shield.daemon
+python ss_daemon.py
 ```
 *Note: To run pure deterministic checks, you need zero keys. If you want Advanced Semantics (VetoShield), export `VETO_PROVIDER=gemini` and `GEMINI_API_KEY` before starting the daemon!*
 
@@ -49,7 +51,7 @@ export SOVEREIGN_SHIELD_MODE="remote"
 
 By default, the plugin protects a strict list of vectors: `bash`, `system.run`, `fs_write`, `fs_read`, `python`, `exec`.
 
-If your agent uses different native tools or you want to expand coverage, you can directly override the hook targets via bash environment without ever altering the Javascript binary.
+If your agent uses different native tools or you want to expand coverage, you can directly override the hook targets via bash environment without ever altering the JavaScript binary.
 
 ```bash
 # Example: Only heavily sandbox terminal tools
