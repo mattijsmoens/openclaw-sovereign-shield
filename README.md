@@ -28,14 +28,12 @@ openclaw plugins install github.com/mattijsmoens/openclaw-sovereign-shield
 
 ### 1. Local Daemon Mode (Default)
 By default, the plugin connects to `http://localhost:8765`.
-For maximum privacy and zero latency, you must run the SovereignShield Python daemon locally on your machine.
+For maximum privacy and zero latency, run the SovereignShield daemon locally on your machine.
 
 ```bash
 pip install sovereign-shield
-python ss_daemon.py
+sovereign-shield-daemon
 ```
-
-> Download [`ss_daemon.py`](https://github.com/mattijsmoens/sovereign-shield/blob/main/SovereignShield/ss_daemon.py) from the repository.
 *Note: To run pure deterministic checks, you need zero keys. If you want Advanced Semantics (VetoShield), export `VETO_PROVIDER=gemini` and `GEMINI_API_KEY` before starting the daemon!*
 
 ### 2. Cloud SaaS Mode (Fully Managed)
