@@ -1,0 +1,13 @@
+{
+  "name": "openclaw-sovereign-shield",
+  "version": "1.0.0",
+  "description": "SovereignShield security plugin for OpenClaw.",
+  "main": "index.js",
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  },
+  "dependencies": {}
+}

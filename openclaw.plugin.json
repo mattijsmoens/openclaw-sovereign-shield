@@ -1,0 +1,8 @@
+{
+  "id": "openclaw-sovereign-shield",
+  "name": "openclaw-sovereign-shield",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "SovereignShield deterministic and semantic Prompt Injection/RCE protection native integration layer.",
+  "configSchema": {}
+}
