@@ -33,6 +33,7 @@ For maximum privacy and zero latency, you must run the free SovereignShield Pyth
 # Clone SovereignShield core
 git clone https://github.com/mattijsmoens/sovereign-shield
 cd SovereignShield
+pip install sovereign-shield
 python ss_daemon.py
 ```
 *Note: To run pure deterministic checks, you need zero keys. If you want Advanced Semantics (VetoShield), export `VETO_PROVIDER=gemini` and `GEMINI_API_KEY` before starting the daemon!*
