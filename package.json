@@ -1,9 +1,28 @@
 {
   "name": "openclaw-sovereign-shield",
   "version": "1.0.0",
-  "description": "SovereignShield security plugin for OpenClaw.",
+  "description": "SovereignShield deterministic and semantic Prompt Injection/RCE protection native integration layer.",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattijsmoens/openclaw-sovereign-shield.git"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "security",
+    "ai",
+    "prompt-injection",
+    "llm",
+    "firewall"
+  ],
+  "author": "Mattijs Moens",
+  "license": "BSL-1.1",
+  "bugs": {
+    "url": "https://github.com/mattijsmoens/openclaw-sovereign-shield/issues"
+  },
+  "homepage": "https://github.com/mattijsmoens/openclaw-sovereign-shield#readme",
   "openclaw": {
     "extensions": [
       "./index.js"
