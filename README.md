@@ -8,7 +8,7 @@ By design, OpenClaw agents have autonomous access to extremely sensitive system 
 
 ---
 
-## 🔒 Architecture & How It Works
+## Architecture & How It Works
 
 This integration leverages the exact OpenClaw Gateway `before_tool_call` plugin hook. 
 Before an autonomous agent executes a sensitive capability like `bash`, the OpenClaw execution loop is temporarily paused. The raw execution arguments are extracted and rapidly audited by the SovereignShield engine. 
@@ -19,7 +19,7 @@ Before an autonomous agent executes a sensitive capability like `bash`, the Open
 
 ---
 
-## 🚀 Installation & Configuration
+## Installation & Configuration
 
 Install the plugin securely into your OpenClaw environment:
 ```bash
@@ -46,7 +46,7 @@ export SOVEREIGN_SHIELD_MODE="remote"
 
 ---
 
-## ⚙️ Customization
+## Customization
 
 By default, the plugin protects a strict list of vectors: `bash`, `system.run`, `fs_write`, `fs_read`, `python`, `exec`.
 
